@@ -1,16 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 const CreateAlbum = (props) => {
   return(
     <div>
-    <h2> Add Album Details </h2>
-      <form onSubmit={props.handleAlbumSubmit}>
+    <h3> Create New Album </h3>
+      <form onSubmit={e => props.handleAlbumSubmit(e)}>
         <div>
-          <input type="text" name="title" placeholder="title" onChange={props.handleOnChange}/>
+          <input type="text" name="title" placeholder="title" onChange={e => props.handleOnChange(e)}/>
         </div>
         <div>
-          <input type="submit" />
+          <input type="submit" value="Submit" />
         </div>
       </form>
     </div>
